@@ -6,8 +6,8 @@ A full-stack Kanban board. Create tasks, drag them between **To Do / In Progress
 |---|---|
 | ![Light theme](docs/board-light.jpg) | ![Dark theme](docs/board-dark.jpg) |
 
-**Live demo:** _add your Vercel URL here_  
-**API:** _add your Render URL here_`/api/health`
+**Live demo:** https://taskboard-blond-iota.vercel.app  
+**API:** https://taskboard-api-mavk.onrender.com (health check: `/api/health`)
 
 > The API runs on a free host that sleeps when idle, so the very first load can take up to a minute. The app tells you when that is happening.
 
