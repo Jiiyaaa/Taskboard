@@ -1,0 +1,18 @@
+# Render "Blueprint": lets Render create the API service from this file.
+# Dashboard > New > Blueprint > pick this repo. You will be asked for the two secrets below.
+services:
+  - type: web
+    name: taskboard-api
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false # paste your MongoDB Atlas connection string
+      - key: CLIENT_ORIGIN
+        sync: false # paste your Vercel URL, e.g. https://taskboard.vercel.app
